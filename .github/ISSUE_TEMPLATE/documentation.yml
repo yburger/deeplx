@@ -1,0 +1,136 @@
+name: 📚 Documentation Issue
+description: Report an issue with documentation or request documentation improvements
+title: "[DOCS] "
+labels: ["documentation", "needs-triage"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve our documentation! 
+
+        Good documentation is crucial for repository adoption and developer experience.
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Pre-submission Checklist
+      description: Please confirm the following before submitting
+      options:
+        - label: I have searched existing issues
+          required: true
+        - label: I have checked the latest documentation
+          required: true
+
+  - type: dropdown
+    id: doc-type
+    attributes:
+      label: Documentation Type
+      description: What type of documentation issue is this?
+      options:
+        - Missing documentation
+        - Incorrect information
+        - Outdated information
+        - Unclear explanation
+        - Typo or grammar error
+        - Code example issue
+        - API documentation
+        - Setup/installation guide
+        - Configuration documentation
+        - Best practices guide
+        - Other (specify below)
+    validations:
+      required: true
+
+  - type: input
+    id: doc-location
+    attributes:
+      label: Documentation Location
+      description: Where is the documentation issue located?
+      placeholder: e.g., README.md, docs/api.md, inline comments, etc.
+
+  - type: textarea
+    id: issue-description
+    attributes:
+      label: Issue Description
+      description: Describe the documentation issue
+      placeholder: |
+        - What is missing, incorrect, or unclear?
+        - What specific section or topic?
+        - How does this affect users?
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-content
+    attributes:
+      label: Current Content
+      description: Quote the current documentation (if applicable)
+      placeholder: Copy the current text that needs to be changed...
+      render: markdown
+
+  - type: textarea
+    id: suggested-content
+    attributes:
+      label: Suggested Improvement
+      description: Provide your suggested changes or additions
+      placeholder: What should the documentation say instead?
+      render: markdown
+
+  - type: textarea
+    id: code-examples
+    attributes:
+      label: Code Examples
+      description: Provide code examples if applicable
+      placeholder: |
+        // Example usage
+        const response = await translate({
+          text: "Hello",
+          target_lang: "ES"
+        });
+      render: typescript
+
+  - type: dropdown
+    id: audience
+    attributes:
+      label: Target Audience
+      description: Who would benefit from this documentation?
+      options:
+        - New users/beginners
+        - Experienced developers
+        - API integrators
+        - Contributors
+        - DevOps/deployment teams
+        - All users
+    validations:
+      required: true
+
+  - type: textarea
+    id: user-impact
+    attributes:
+      label: User Impact
+      description: How does this documentation issue affect users?
+      placeholder: |
+        - Difficulty understanding how to use the feature
+        - Unable to complete setup/configuration
+        - Confusion about API behavior
+        - Deployment/integration challenges
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any other relevant information
+      placeholder: |
+        - Related issues or PRs
+        - External resources that might help
+        - Screenshots or examples
+
+  - type: checkboxes
+    id: contribution
+    attributes:
+      label: Contribution
+      description: Are you willing to help improve the documentation?
+      options:
+        - label: I am willing to submit a pull request to fix this
+        - label: I can help review and test the improved documentation

@@ -1,0 +1,134 @@
+name: ❓ Question
+description: Ask a question about DeepLX usage, configuration, or implementation
+title: "[QUESTION] "
+labels: ["question", "needs-triage"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for your question! 
+
+        Before submitting, please:
+        - Check the documentation and README
+        - Search existing issues and discussions
+        - Review the FAQ section (if available)
+
+        For general discussions, consider using [GitHub Discussions](../../discussions) instead.
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Pre-submission Checklist
+      description: Please confirm the following before submitting
+      options:
+        - label: I have searched existing issues and discussions
+          required: true
+        - label: I have checked the documentation
+          required: true
+        - label: This is a specific question that needs clarification
+          required: true
+
+  - type: dropdown
+    id: question-category
+    attributes:
+      label: Question Category
+      description: What category does your question fall into?
+      options:
+        - Setup and installation
+        - Configuration
+        - API usage
+        - Integration
+        - Performance and optimization
+        - Error troubleshooting
+        - Best practices
+        - Architecture and design
+        - Contributing and development
+        - Deployment
+        - Other (specify below)
+    validations:
+      required: true
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Your Question
+      description: What would you like to know?
+      placeholder: Ask your question clearly and specifically...
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context and Background
+      description: Provide context about what you're trying to achieve
+      placeholder: |
+        - What are you trying to accomplish?
+        - What have you already tried?
+        - What is your current setup?
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-setup
+    attributes:
+      label: Current Setup
+      description: Describe your current configuration and environment
+      placeholder: |
+        - DeepLX version: 
+        - Environment: (Cloudflare Workers/Local/Docker)
+        - Configuration details:
+        - Dependencies:
+
+  - type: textarea
+    id: code-example
+    attributes:
+      label: Relevant Code
+      description: Share any relevant code or configuration
+      placeholder: |
+        // Your current implementation
+        const config = {
+          // your configuration
+        };
+      render: typescript
+
+  - type: textarea
+    id: expected-outcome
+    attributes:
+      label: Expected Outcome
+      description: What result are you expecting or hoping to achieve?
+      placeholder: Describe what you want to happen...
+
+  - type: textarea
+    id: additional-info
+    attributes:
+      label: Additional Information
+      description: Any other details that might be helpful
+      placeholder: |
+        - Error messages (if any)
+        - Logs or debugging output
+        - Related documentation you've read
+        - External resources you've consulted
+
+  - type: dropdown
+    id: urgency
+    attributes:
+      label: Urgency
+      description: How urgent is this question for you?
+      options:
+        - Not urgent (learning/exploring)
+        - Moderate (affecting development)
+        - High (blocking progress)
+        - Critical (production issue)
+
+  - type: checkboxes
+    id: help-others
+    attributes:
+      label: Community Help
+      description: How can this help others?
+      options:
+        - label: This question might be common for other users
+        - label: The answer could improve documentation
+        - label: This relates to a potential feature request
+        - label: This might reveal a bug or issue

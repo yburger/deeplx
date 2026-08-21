@@ -1,0 +1,134 @@
+name: 🔒 Security Issue
+description: Report a security vulnerability (for non-critical issues only)
+title: "[SECURITY] "
+labels: ["security", "needs-triage"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ⚠️ **IMPORTANT: For critical security vulnerabilities, do NOT create a public issue.**
+
+        Instead, please follow our [Security Policy](../../security/policy) to report the issue privately.
+
+        This template is only for:
+        - Non-critical security improvements
+        - Security-related questions
+        - General security hardening suggestions
+
+  - type: checkboxes
+    id: security-acknowledgment
+    attributes:
+      label: Security Acknowledgment
+      description: Please confirm this is appropriate for a public issue
+      options:
+        - label: This is NOT a critical security vulnerability
+          required: true
+        - label: I have read the Security Policy
+          required: true
+        - label: This issue can be discussed publicly
+          required: true
+
+  - type: dropdown
+    id: security-type
+    attributes:
+      label: Security Issue Type
+      description: What type of security issue is this?
+      options:
+        - Security hardening suggestion
+        - Non-critical security improvement
+        - Security configuration question
+        - Security documentation improvement
+        - Security best practices question
+        - Other (specify below)
+    validations:
+      required: true
+
+  - type: textarea
+    id: security-description
+    attributes:
+      label: Security Issue Description
+      description: Describe the security concern or suggestion
+      placeholder: |
+        - What is the security concern?
+        - How could it be improved?
+        - What is the potential impact?
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-behavior
+    attributes:
+      label: Current Behavior
+      description: How does the current implementation handle security?
+      placeholder: Describe the current security implementation...
+
+  - type: textarea
+    id: suggested-improvement
+    attributes:
+      label: Suggested Improvement
+      description: What security improvements do you suggest?
+      placeholder: |
+        - Specific changes to implement
+        - Security controls to add
+        - Configuration improvements
+        - Best practices to follow
+
+  - type: textarea
+    id: impact-assessment
+    attributes:
+      label: Impact Assessment
+      description: What is the potential impact if not addressed?
+      placeholder: |
+        - Risk level: Low/Medium/High
+        - Affected components
+        - Potential consequences
+        - Likelihood of exploitation
+
+  - type: textarea
+    id: mitigation
+    attributes:
+      label: Current Mitigation
+      description: Are there any current mitigations or workarounds?
+      placeholder: |
+        - Existing security controls
+        - Workarounds users can implement
+        - Configuration changes that help
+
+  - type: textarea
+    id: references
+    attributes:
+      label: References
+      description: Any relevant security resources or standards
+      placeholder: |
+        - OWASP guidelines
+        - Security standards
+        - Research papers
+        - CVE references (if applicable)
+
+  - type: checkboxes
+    id: affected-areas
+    attributes:
+      label: Affected Areas
+      description: Which areas of the system are affected?
+      options:
+        - Authentication
+        - Authorization
+        - Input validation
+        - Output encoding
+        - Rate limiting
+        - Configuration
+        - Dependencies
+        - Deployment
+        - Logging and monitoring
+        - Data handling
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any other relevant information
+      placeholder: |
+        - Environment details
+        - Compliance requirements
+        - Integration considerations

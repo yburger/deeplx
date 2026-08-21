@@ -1,0 +1,218 @@
+name: ✨ Feature Request
+description: Suggest a new feature or enhancement
+title: "[FEATURE] "
+labels: ["enhancement", "needs-triage"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting a new feature! 
+
+        Before submitting, please:
+        - Search existing issues to avoid duplicates
+        - Check if the feature aligns with the repository goals
+        - Consider if this could be implemented as a plugin or extension
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Pre-submission Checklist
+      description: Please confirm the following before submitting
+      options:
+        - label: I have searched existing issues
+          required: true
+        - label: I have checked the roadmap and documentation
+          required: true
+        - label: This feature aligns with the repository's goals
+          required: true
+
+  - type: textarea
+    id: feature-summary
+    attributes:
+      label: Feature Summary
+      description: A brief, clear summary of the feature
+      placeholder: What feature would you like to see added?
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem-statement
+    attributes:
+      label: Problem Statement
+      description: What problem does this feature solve?
+      placeholder: |
+        Describe the problem or limitation you're experiencing:
+        - What is currently difficult or impossible to do?
+        - How does this impact your workflow?
+        - What is the current workaround (if any)?
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-solution
+    attributes:
+      label: Proposed Solution
+      description: Describe your proposed solution in detail
+      placeholder: |
+        Explain how you envision this feature working:
+        - What would the API look like?
+        - How would users interact with it?
+        - What would be the expected behavior?
+    validations:
+      required: true
+
+  - type: textarea
+    id: use-cases
+    attributes:
+      label: Use Cases
+      description: Provide specific use cases and examples
+      placeholder: |
+        Example use cases:
+        1. As a developer, I want to...
+        2. When translating documents, I need to...
+        3. For improved functionality, it would be helpful to...
+    validations:
+      required: true
+
+  - type: textarea
+    id: api-design
+    attributes:
+      label: API Design (if applicable)
+      description: Propose the API design for this feature
+      placeholder: |
+        // Example API usage
+        POST /api/new-feature
+        {
+          "parameter1": "value",
+          "parameter2": true
+        }
+
+        // Response
+        {
+          "result": "...",
+          "status": "success"
+        }
+      render: typescript
+
+  - type: dropdown
+    id: feature-type
+    attributes:
+      label: Feature Type
+      description: What type of feature is this?
+      options:
+        - New API endpoint
+        - Enhancement to existing functionality
+        - Performance improvement
+        - Developer experience improvement
+        - Documentation enhancement
+        - Configuration option
+        - Other (specify in additional context)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: How important is this feature to you?
+      options:
+        - Critical (blocks major functionality)
+        - High (significant improvement)
+        - Medium (nice to have)
+        - Low (minor enhancement)
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternative Solutions
+      description: Have you considered any alternative solutions?
+      placeholder: |
+        - Alternative approach 1: ...
+        - Alternative approach 2: ...
+        - Why the proposed solution is preferred: ...
+
+  - type: textarea
+    id: implementation-thoughts
+    attributes:
+      label: Implementation Thoughts
+      description: Any thoughts on how this could be implemented?
+      placeholder: |
+        - Which files/modules would need changes?
+        - Are there any technical challenges?
+        - Dependencies or breaking changes?
+        - Performance considerations?
+
+  - type: dropdown
+    id: breaking-changes
+    attributes:
+      label: Breaking Changes
+      description: Would this feature require breaking changes?
+      options:
+        - No breaking changes
+        - Minor breaking changes (with migration path)
+        - Major breaking changes
+        - Unsure
+    validations:
+      required: true
+
+  - type: textarea
+    id: compatibility
+    attributes:
+      label: Compatibility Considerations
+      description: Any compatibility concerns?
+      placeholder: |
+        - Backward compatibility requirements
+        - Impact on existing APIs
+        - Migration strategy (if applicable)
+
+  - type: checkboxes
+    id: related-areas
+    attributes:
+      label: Related Areas
+      description: Which areas of the codebase would this affect?
+      options:
+        - Translation API
+        - Rate limiting
+        - Caching
+        - Authentication
+        - Error handling
+        - Performance monitoring
+        - Configuration
+        - Documentation
+        - Testing
+        - Deployment
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context
+      description: Any other information that might be helpful
+      placeholder: |
+        - Links to related resources
+        - Screenshots or mockups
+        - Performance requirements
+        - Security considerations
+
+  - type: checkboxes
+    id: contribution
+    attributes:
+      label: Contribution
+      description: Are you willing to help implement this feature?
+      options:
+        - label: I am willing to submit a pull request for this feature
+        - label: I can help with design and testing
+        - label: I can provide detailed requirements and feedback
+
+  - type: textarea
+    id: timeline
+    attributes:
+      label: Timeline
+      description: When would you need this feature?
+      placeholder: |
+        - Immediate need
+        - Within next month
+        - Within next quarter
+        - No specific timeline

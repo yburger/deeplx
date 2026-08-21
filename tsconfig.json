@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "allowImportingTsExtensions": true,
+    "lib": ["ES2020", "WebWorker"],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "noEmit": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "ES2020",
+    "types": ["jest", "node", "@cloudflare/workers-types"]
+  },
+  "exclude": ["node_modules", "dist"],
+  "include": ["src/**/*", "tests/**/*", "worker-configuration.d.ts"]
+}

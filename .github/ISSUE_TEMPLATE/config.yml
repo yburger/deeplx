@@ -1,0 +1,14 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 GitHub Discussions
+    url: https://github.com/xixu-me/DeepLX/discussions
+    about: Ask questions, share ideas, and discuss with the community
+  - name: 🔒 Security Policy
+    url: https://github.com/xixu-me/DeepLX/security/policy
+    about: Report security vulnerabilities privately
+  - name: 📖 Documentation
+    url: https://github.com/xixu-me/DeepLX#readme
+    about: Read the repository documentation and guides
+  - name: 🚀 Cloudflare Workers Docs
+    url: https://developers.cloudflare.com/workers/
+    about: Learn more about Cloudflare Workers platform

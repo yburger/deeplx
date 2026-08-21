@@ -1,0 +1,30 @@
+# Coverage configuration for DeepLX test suite
+
+[run]
+source = src/
+omit = 
+    */node_modules/*
+    */tests/*
+    */coverage/*
+    */.git/*
+    */dist/*
+    */build/*
+
+[report]
+exclude_lines =
+    pragma: no cover
+    def __repr__
+    if self.debug:
+    if settings.DEBUG
+    raise AssertionError
+    raise NotImplementedError
+    if 0:
+    if __name__ == .__main__.:
+    class .*\bProtocol\):
+    @(abc\.)?abstractmethod
+
+[html]
+directory = coverage/html
+
+[xml]
+output = coverage/coverage.xml

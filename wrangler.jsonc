@@ -1,0 +1,56 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "account_id": "07c56e0dc4b3b1597495aa78fe7ebbf8",
+  "analytics_engine_datasets": [
+    {
+      "binding": "ANALYTICS"
+    }
+  ],
+  "compatibility_date": "2025-07-19",
+  "kv_namespaces": [
+    {
+      "binding": "CACHE_KV",
+      "id": "7a7d70d9398a455f8a5ba2c93a0b3f6b",
+      "preview_id": "e9e499fe006e4879a0668e792fe2dd15"
+    },
+    {
+      "binding": "RATE_LIMIT_KV",
+      "id": "2b933c52637541d9af06fe989fcda701",
+      "preview_id": "bbed039364e5488e8ed58701c3ee5da5"
+    }
+  ],
+  "main": "src/index.ts",
+  "name": "deeplx",
+  "observability": {
+    "enabled": false,
+    "head_sampling_rate": 1,
+    "logs": {
+      "enabled": true,
+      "head_sampling_rate": 1,
+      "invocation_logs": true,
+      "persist": true
+    },
+    "traces": {
+      "enabled": true,
+      "head_sampling_rate": 1,
+      "persist": true
+    }
+  },
+  "placement": {
+    "mode": "smart"
+  },
+  "routes": [
+    {
+      "pattern": "dplx.xi-xu.me",
+      "custom_domain": true
+    }
+  ],
+  "triggers": {
+    "crons": ["*/5 * * * *"]
+  },
+  "vars": {
+    "DEBUG_MODE": "false",
+    "PROXY_URLS": "https://xdpl-iota.vercel.app/jsonrpc,https://0.xdpl.xixu.dpdns.org/jsonrpc,https://1.xdpl.xixu.dpdns.org/jsonrpc,https://2.xdpl.xixu.dpdns.org/jsonrpc,https://3.xdpl.xixu.dpdns.org/jsonrpc,https://4.xdpl.xixu.dpdns.org/jsonrpc,https://5.xdpl.xixu.dpdns.org/jsonrpc,https://6.xdpl.xixu.dpdns.org/jsonrpc,https://7.xdpl.xixu.dpdns.org/jsonrpc,https://8.xdpl.xixu.dpdns.org/jsonrpc,https://9.xdpl.xixu.dpdns.org/jsonrpc"
+  },
+  "workers_dev": false
+}
